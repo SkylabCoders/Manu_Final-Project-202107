@@ -1,10 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import App from './components/App';
+import { getAllSpecialities } from './redux/actionCreators';
+import store from './redux/store';
 
+store.dispatch(getAllSpecialities());
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <App />
+    </Provider>
+
   </React.StrictMode>,
   document.getElementById('root')
 );

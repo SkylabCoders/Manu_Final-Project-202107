@@ -1,8 +1,8 @@
-const User = require('../models/userModel');
+const Cursos = require('../models/courseModel');
 
 async function createOne({ body }, res) {
   try {
-    const newUser = await User.create(body);
+    const newUser = await Cursos.create(body);
     res.json(newUser);
   } catch (error) {
     res.status(500);
@@ -12,7 +12,7 @@ async function createOne({ body }, res) {
 
 async function getAll({ query }, res) {
   try {
-    const users = await User.find(query);
+    const users = await Cursos.find(query);
     res.json(users);
   } catch (error) {
     res.status(500);
@@ -22,7 +22,7 @@ async function getAll({ query }, res) {
 
 async function getOneById({ params: { userId } }, res) {
   try {
-    const user = await User.findById(userId)
+    const user = await Cursos.findById(userId)
       .populate({
         path: 'friends',
         select: ['name']
@@ -47,7 +47,7 @@ async function updateOneById(
   res
 ) {
   try {
-    const updatedUser = await User.findByIdAndUpdate(
+    const updatedUser = await Cursos.findByIdAndUpdate(
       userId,
       body,
       {
@@ -65,7 +65,7 @@ async function updateOneById(
 
 async function deleteOneById({ params: { userId } }, res) {
   try {
-    await User.findByIdAndDelete(userId);
+    await Cursos.findByIdAndDelete(userId);
     res.status(204);
     res.json();
   } catch (error) {

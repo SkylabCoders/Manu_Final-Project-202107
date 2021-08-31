@@ -1,6 +1,6 @@
 const { model, Schema } = require('mongoose');
 
-const cursoSchema = new Schema({
+const courseSchema = new Schema({
   name: String,
   title: String,
   subtitle: String,
@@ -13,9 +13,9 @@ const cursoSchema = new Schema({
   creation: String,
   temary: [
     {
-      type: Schema.type.ObjectId, ref: 'Clase'
+      type: Schema.Types.ObjectId, ref: 'Lection'
     }
   ]
 });
 
-module.exports = model('Course', cursoSchema);
+module.exports = model('Course', courseSchema);

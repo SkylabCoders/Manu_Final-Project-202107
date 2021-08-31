@@ -1,18 +1,21 @@
 const { model, Schema } = require('mongoose');
 
-const cursosSchema = new Schema({
+const cursoSchema = new Schema({
   name: String,
   title: String,
   subtitle: String,
+  description: String,
   image: String,
-  clases: [
+  category: String,
+  teacher: String,
+  level: String,
+  duration: String,
+  creation: String,
+  temary: [
     {
-      name: String,
-      titulo: String,
-      subtitulo: String,
-      video: String
+      type: Schema.type.ObjectId, ref: 'Clase'
     }
   ]
 });
 
-module.exports = model('cursos', cursosSchema);
+module.exports = model('Course', cursoSchema);

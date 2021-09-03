@@ -9,9 +9,13 @@ import Profile from './pages/Profile';
 import Register from './pages/Register';
 import Protected from './Routes/Protected';
 import Public from './Routes/Public';
+import Header from './Header';
+
+import './App.scss';
 
 const App = () => (
   <Router>
+    <Header />
     <Switch>
       <Protected path="/" exact component={Home} />
       <Protected path="/favoritemovies/:id" component={FavoriteMovies} />

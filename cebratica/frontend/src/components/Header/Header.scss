@@ -1,0 +1,35 @@
+.header {
+  background-color: yellowgreen;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  &__logo-box {
+    margin: 10px;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__logo-img {
+    height: 3rem;
+  }
+  &__navegator {
+    width: auto;
+  }
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+    align-items: center;
+    height: 100%;
+    width: auto;
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-right: 30%;
+  }
+  &__nav-link {
+    text-decoration: none;
+    margin: 0 10px;
+  }
+}

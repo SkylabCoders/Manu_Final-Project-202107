@@ -1,9 +1,9 @@
 import React from 'react';
+import Header from './Header/index';
 
-function App() {
-  return (
-    <h1>HOLA MUNDO</h1>
-  );
-}
+const App = () => (
+  <Header />
+
+);
 
 export default App;

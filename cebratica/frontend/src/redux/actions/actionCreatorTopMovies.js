@@ -5,9 +5,8 @@ const clientId = '';
 
 export default async function getMoviesToken() {
   try {
-    const { data } = await axios({
+    const { data } = await fetch({
       method: 'POST',
-      url: '',
       headers: {
         'Content-Type': '',
         Authorization: `Basic ${clientId}`

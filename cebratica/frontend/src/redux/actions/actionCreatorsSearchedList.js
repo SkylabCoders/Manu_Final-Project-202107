@@ -2,6 +2,7 @@ import axios from 'axios';
 import actionTypes from './actionTypes';
 
 export default function loadSearchedArtists(inputValue) {
+  // eslint-disable-next-line no-unused-vars
   return async (dispatch) => {
     const token = JSON.parse(localStorage.getItem('token'));
     const { data } = await axios({

@@ -1,7 +1,17 @@
-import React from 'react';
+/* import React from 'react';
 
-const FavoriteMovies = () => (
-  <h1>Favorite Movies</h1>
+const FavoriteMovies = ({
+  imdb_id,
+  original_title,
+  genres,
+
+}) => (
+  <div>{movie.map(movie => (
+
+  ))}
+
+  </div>
 );
 
 export default FavoriteMovies;
+ */

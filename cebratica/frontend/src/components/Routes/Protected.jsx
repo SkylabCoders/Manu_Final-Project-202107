@@ -3,7 +3,7 @@ import { Route, Redirect } from 'react-router-dom';
 
 // eslint-disable-next-line react/prop-types
 const Protected = ({ component: Component, ...rest }) => {
-  const userLogged = true;
+  const userLogged = false;
 
   if (!userLogged) {
     return <Redirect to="/login" />;

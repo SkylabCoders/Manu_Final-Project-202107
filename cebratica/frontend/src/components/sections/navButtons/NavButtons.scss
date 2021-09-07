@@ -1,0 +1,35 @@
+.numbers {
+  background-color: blueviolet;
+  position: fixed;
+  top: 85%;
+  left: 50%;
+  right: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+.button {
+  background-color: white;
+  color: black;
+  border: 2px solid #008cba;
+  background-color: #4caf50; /* Green */
+  border: none;
+  border-radius: 25px;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  padding: 8px;
+  margin: 3px;
+  border-radius: 25px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
+import FeaturedMovies from '../TopMovies';
 
 const Home = () => (
-  <h1>HOME</h1>
+  <FeaturedMovies />
 );
 
 export default Home;

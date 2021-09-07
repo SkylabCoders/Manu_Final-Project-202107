@@ -4,7 +4,7 @@ const topMoviesReducer = (topMovies = [], action) => {
   let newTopMovies = topMovies;
   switch (action.type) {
     case actionTypes.LOAD_TOP_MOVIES:
-      newTopMovies = action.newTopMovies?.map((movie) => movie);
+      newTopMovies = action.data;
       break;
     default:
       break;

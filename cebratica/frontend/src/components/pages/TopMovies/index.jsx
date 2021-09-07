@@ -4,23 +4,21 @@ import loadMovies from '../../../redux/actions/actionCreatorTopMovies';
 
 import './TopMovies.scss';
 
-const img = 'https://image.tmdb.org/t/p/';
-
 const FeaturedMovies = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(loadMovies());
   }, []);
 
-  const featuredMovies = useSelector((state) => state.topMovies);
+  const featuredMovies = useSelector((movie) => movie.topMovies);
   return (
     <div className="movies">
       <h1>Top Movies</h1>
       <div className="movies__grid">
         {featuredMovies.map((movie) => (
           <div className="movies__item">
-            <p>{movie.original_title}</p>
-            <img src={img + movie.poster_path} alt="Pouster" />
+            <p>{movie.title}</p>
+            <img className="movies__img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Pouster" />
 
           </div>
         ))}

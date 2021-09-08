@@ -5,7 +5,7 @@ const searchedMovieReducers = (filterMovie = [], action) => {
 
   switch (action.type) {
     case actionTypes.LOAD_SEARCHED_MOVIES:
-      newFilterMovie = action.movie.map((movie) => movie);
+      newFilterMovie = action.data;
       break;
 
     default:

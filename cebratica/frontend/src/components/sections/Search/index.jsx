@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
 import searchMovies from '../../../redux/actions/actionCreatorSearchedMovies';
 import './Search.scss';
 
@@ -33,11 +34,11 @@ const SearchMovies = () => {
       <div className="movies">
         <div className="movies__grid">
           {searchedMovies?.map((movie) => (
-            <div className="movies__item">
+            <Link className="movies__item" to={`moviedetails/${movie?.id}`}>
               <img className="movies__img" src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`} alt="Pouster" />
               <h3>{movie?.title}</h3>
               <p>{movie?.vote_average}</p>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

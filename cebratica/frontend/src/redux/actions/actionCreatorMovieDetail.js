@@ -1,12 +1,12 @@
 import axios from 'axios';
 import actionTypes from './actionTypes';
 
-export default function searchMovies(movie) {
+export default function movieDetails(id) {
   return async (dispatch) => {
     try {
-      const { data } = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=c953b29ed723f6d4e60c4d192395bc92&query=${movie}`);
+      const { data } = await axios(`https://api.themoviedb.org/3/movie/${id.movieid}?api_key=c953b29ed723f6d4e60c4d192395bc92`);
       dispatch({
-        type: actionTypes.LOAD_SEARCHED_MOVIES,
+        type: actionTypes.LOAD_MOVIE_DETAILS,
         data: data.results
       });
     } catch (error) {

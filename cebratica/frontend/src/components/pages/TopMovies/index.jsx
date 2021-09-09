@@ -19,10 +19,9 @@ const FeaturedMovies = () => {
         <div className="movies__grid">
           {featuredMovies.map((movie) => (
             <div className="movies__item">
-
-              <img className="movies__img" src={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} alt="Pouster" />
-              <h3>{movie.title}</h3>
-              <p>{movie.vote_average}</p>
+              <img className="movies__img" src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt="Pouster" />
+              <h3>{movie?.title}</h3>
+              <p>{movie?.vote_average}</p>
             </div>
           ))}
         </div>

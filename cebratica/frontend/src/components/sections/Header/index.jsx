@@ -35,7 +35,7 @@ const Header = () => {
               <ul className="header__nav-list">
                 <li className="header__nav-item"><Link className="header__nav-link" to="/profile">Profile</Link></li>
                 <li className="header__nav-item"><Link className="header__nav-link" to="/featuredmovies">Top Rated</Link></li>
-                <li className="header__nav-item"><Link className="header__nav-link" to="/favoritemovies/:1">Favorite Movies</Link></li>
+                <li className="header__nav-item"><Link className="header__nav-link" to="/favoritemovies/">Favorite Movies</Link></li>
               </ul>
             </nav>
 

@@ -22,7 +22,7 @@ const App = () => (
       <Switch>
 
         <Route path="/featuredmovies" component={TopRatedMovies} />
-        <Route path="/favoritemovies/:id" component={FavoriteMovies} />
+        <Route path="/favoritemovies" component={FavoriteMovies} />
         <Route path="/moviedetails/:id" component={MovieDetails} />
         <Route path="/profile" exact component={Profile} />
         <Route path="/" exact component={Home} />

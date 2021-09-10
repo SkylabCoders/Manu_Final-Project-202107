@@ -6,8 +6,6 @@ import loadMovies from '../../../redux/actions/actionCreatorTopMovies';
 import NavButtons from '../../sections/navButtons';
 import AddToFavourites from '../../sections/AddFavButtons';
 
-import './TopMovies.scss';
-
 const FeaturedMovies = () => {
   const { isAuthenticated } = useAuth0();
   const dispatch = useDispatch();

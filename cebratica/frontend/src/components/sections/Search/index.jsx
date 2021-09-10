@@ -6,6 +6,7 @@ import searchMovies from '../../../redux/actions/actionCreatorSearchedMovies';
 import AddToFavourites from '../AddFavButtons';
 
 import './Search.scss';
+import '../../App.scss';
 
 const SearchMovies = () => {
   const { isAuthenticated } = useAuth0();
@@ -24,8 +25,10 @@ const SearchMovies = () => {
   const searchedMovies = useSelector((store) => store.searchMovies);
 
   return (
-    <>
-      <form onSubmit={handleSubmit} className="search-form">
+    <section className="section-search-movie">
+
+      <h2 className="section-search-movie__h2-title">Search Movies</h2>
+      <form onSubmit={handleSubmit} className="section-search-movie__search-form">
         <input
           className="search-form__input"
           type="search"
@@ -37,6 +40,7 @@ const SearchMovies = () => {
         />
       </form>
       <div className="movies">
+
         { searchedMovies.length >= 1
            && <h2>Search Results</h2> }
         <div className="movies__grid">
@@ -56,7 +60,7 @@ const SearchMovies = () => {
           ))}
         </div>
       </div>
-    </>
+    </section>
 
   );
 };

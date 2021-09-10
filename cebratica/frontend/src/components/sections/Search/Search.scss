@@ -1,6 +1,44 @@
+.section-search-movie {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 40vh;
+  background-color: rgba(25, 25, 112, 0.842);
+  color: rgb(250, 220, 89);
+  padding: 20px 0 50px 0;
+  &__h2-title {
+    padding: 25px 0 20px 0;
+    font-size: 35px;
+  }
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  &__input {
+    border: midnightblue 2px solid;
+    background-color: rgb(250, 220, 89);
+    width: 30rem;
+    height: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    font-family: Roboto, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+      Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: 800;
+    color: midnightblue;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+}
+
 .movies {
   display: flex;
-  width: 90%;
+  max-width: 1120px;
   margin: 0 auto;
   flex-flow: column wrap;
   justify-content: center;
@@ -15,11 +53,11 @@
   margin: 0 auto;
 }
 .movies__item {
-  background-color: crimson;
-  height: 330px;
+  background-color: rgb(250, 220, 89);
+  height: 450px;
   width: 250px;
+  padding: 10px;
   margin: 50px 15px;
-  border: darkblue 3px solid;
   border-style: inset;
   border-radius: 10px;
   transition-duration: 0.4s;
@@ -31,7 +69,7 @@
 .movies__img {
   width: 100%;
   border-radius: 8px;
-  height: 100%;
+  height: 350px;
 }
 .movies__text {
   position: absolute;
@@ -44,14 +82,4 @@
 .movies__movie-container {
   display: flex;
   flex-flow: column wrap;
-}
-
-.search-form {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  &__input {
-    border: black 2px solid;
-    background-color: rgb(250, 220, 89);
-  }
 }

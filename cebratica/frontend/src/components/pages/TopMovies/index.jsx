@@ -19,6 +19,7 @@ const FeaturedMovies = () => {
 
   return (
     <div className="movies">
+      <h2>Top movies</h2>
       <div className="movies__grid">
         {featuredMovies?.map((movie) => (
           <div className="movies__movie-container">

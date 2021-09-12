@@ -1,7 +1,32 @@
 import React from 'react';
 
-import './AddFavButtons.scss';
+import { makeStyles } from '@material-ui/core/styles';
 
+import IconButton from '@material-ui/core/IconButton';
+import DeleteIcon from '@material-ui/icons/Delete';
+import AddToPhotosIcon from '@material-ui/icons/AddToPhotos';
+
+const useStyles = makeStyles({
+  sectionButtons: {
+    margin: '-25px 0 0 0',
+    display: 'flex',
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
+  },
+  buttonAdd: {
+    margin: '0',
+    padding: '0',
+    height: '50px',
+    width: '50px',
+    colorPrimary: 'primary'
+  },
+  buttonDelete: {
+    margin: '0',
+    padding: '0',
+    height: '50px',
+    width: '50px'
+  }
+});
 const setStoreMovie = (movie) => {
   try {
     localStorage.setItem(JSON.stringify(movie?.id.original_title), JSON.stringify(movie));
@@ -16,7 +41,7 @@ const addFavButton = (movies) => {
   setStoreMovie(movies);
 
   return (
-    <p>Hola mundo cruel</p>
+    <p>hello wordl</p>
   );
 };
 const removeStoreMovie = (movie) => {
@@ -30,14 +55,21 @@ const removeFavButton = (movies) => {
   removeStoreMovie(movies);
 
   return (
-    <p>Hola mundo cruel</p>
+    <p>{movies}</p>
   );
 };
 
-const AddToFavourites = (movies) => (
-  <>
-    <button className="addButton" type="submit" onClick={() => removeFavButton(movies)}>-</button>
-    <button className="addButton" type="submit" onClick={() => addFavButton(movies)}>+</button>
-  </>
-);
+const AddToFavourites = (movies) => {
+  const classes = useStyles();
+  return (
+    <section className={classes.sectionButtons}>
+      <IconButton aria-label="delete" color="primary" variant="container" className={classes.buttonDelete} type="submit" onClick={() => removeFavButton(movies)}>
+        <DeleteIcon />
+      </IconButton>
+      <IconButton aria-label="delete" color="primary" variant="container" className={classes.buttonAdd} type="submit" onClick={() => addFavButton(movies)}>
+        <AddToPhotosIcon />
+      </IconButton>
+    </section>
+  );
+};
 export default AddToFavourites;

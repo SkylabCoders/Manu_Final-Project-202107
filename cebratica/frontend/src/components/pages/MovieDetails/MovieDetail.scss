@@ -2,40 +2,51 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
-  background-color: coral;
+  height: 90vh;
+  background-color: rgba(239, 239, 247, 0.842);
 }
 .movie-detail {
-  background-color: blueviolet;
-  height: 90%;
+  height: 70%;
   width: 60%;
   margin: 0 auto;
   display: flex;
   flex-flow: row wrap;
+  transition-duration: 0.4s;
+  border-radius: 35px;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.24),
+      0 17px 50px 0 rgba(0, 0, 0, 0);
+  }
   &__h1-title {
     width: 100%;
-    height: 20%;
-    background-color: brown;
+    height: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: midnightblue;
+    font-size: 2rem;
   }
 }
 .item-box {
   width: 100%;
-  height: 100%;
-  background-color: chartreuse;
+  height: 80%;
   display: flex;
   flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
   &__item-description {
     width: 65%;
+    height: 100%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
     margin: 0 auto;
     text-align: center;
-    padding: 30px;
+    padding: 0 30px;
+    text-align: left;
   }
   &__item-picture-box {
     width: 35%;
@@ -47,6 +58,6 @@
 }
 .item-picture-box__img {
   width: auto;
-  height: 400px;
+  height: 380px;
   padding: 30px;
 }

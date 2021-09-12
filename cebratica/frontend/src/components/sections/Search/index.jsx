@@ -42,26 +42,26 @@ const SearchMovies = () => {
       <div className="movies">
 
         { searchedMovies.length >= 1
-           && <h2>Search Results</h2> }
+           && <h2 className="movies__h2-title">Results</h2> }
         <div className="movies__grid">
           {searchedMovies?.map((movie) => (
             <div className="movies__movie-container">
               <Link className="movies__item" to={`moviedetails/${movie?.id}`}>
                 <img className="movies__img" src={`https://image.tmdb.org/t/p/w500${movie?.poster_path}`} alt="Pouster" />
-                <h3>{movie?.title}</h3>
-                <p>{movie?.vote_average}</p>
+                <div className="moives__description-box">
+                  <h3 id="movies__title">{movie?.title}</h3>
+                  <p className="movies__average">{movie?.vote_average}</p>
+                </div>
               </Link>
               <div>
                 { isAuthenticated
            && <AddToFavourites id={movie} /> }
               </div>
             </div>
-
           ))}
         </div>
       </div>
     </section>
-
   );
 };
 export default SearchMovies;

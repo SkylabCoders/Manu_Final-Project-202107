@@ -1,5 +1,7 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
+import { Button } from '@material-ui/core';
+import './Profile.scss';
 
 const Profile = () => {
   const { user, isAuthenticated, isLoading } = useAuth0();
@@ -8,13 +10,15 @@ const Profile = () => {
   }
   return (
     isAuthenticated && (
-    <main>
-      <img src={user.picture} alt={user.name} />
-      <p>
-        `$
-        {user.name}
-        `
+    <main className="profile-container">
+      <img className="profile-container__img" src={user.picture} alt="user" />
+      <p className="profile-container__nickName">
+        {user.nickname}
       </p>
+      <p className="profile-container__name">
+        {user.name}
+      </p>
+      <Button className="profile-container__button" type="submit">Favorite movies</Button>
     </main>
     )
   );

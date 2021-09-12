@@ -8,6 +8,15 @@ import './Header.scss';
 
 const Header = () => {
   const { isAuthenticated } = useAuth0();
+
+  const elemento = document.getElementById('header');
+  (window).scroll((e) => {
+    if (e.scrollTop() > 0) {
+      elemento.classList.add('cambioColor');
+    } else {
+      elemento.classList.remove('cambioColor');
+    }
+  });
   return (
     <header className="header">
       <div className="header__container">
@@ -27,22 +36,14 @@ const Header = () => {
           { isAuthenticated
             ? <LogoutButton />
             : <LoginButton />}
-          { !isAuthenticated
-            ? (
-              <nav className="header__navegator">
-                <ul className="header__nav-list">
-                  <li className="header__nav-item"><Link className="header__nav-link" to="/home">Home</Link></li>
-                </ul>
-              </nav>
-            )
-            : (
+          { isAuthenticated
+            && (
               <nav className="header__navegator">
                 <ul className="header__nav-list">
                   <li className="header__nav-item"><Link className="header__nav-link" to="/profile">Profile</Link></li>
                   <li className="header__nav-item"><Link className="header__nav-link" to="/favoritemovies/">Favorite Movies</Link></li>
                 </ul>
               </nav>
-
             )}
         </div>
 

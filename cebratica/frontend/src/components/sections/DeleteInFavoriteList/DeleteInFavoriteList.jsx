@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './DeleteInFavouriteList.scss';
+
 const removeMovieOfLocalStore = (movie) => {
   localStorage.removeItem(JSON.stringify(movie.movie));
 
@@ -9,8 +11,9 @@ const removeMovieOfLocalStore = (movie) => {
   );
 };
 const DeleteInFavoriteList = (movie) => (
-  <>
-    <button className="addButton" type="submit" onClick={() => { removeMovieOfLocalStore(movie); window.location.reload(); }}>click</button>
-  </>
+  <div className=".button-detail__container">
+    <button className="addButton" type="submit" onClick={() => { removeMovieOfLocalStore(movie); window.location.reload(); }}>Delete Movie</button>
+  </div>
+
 );
 export default DeleteInFavoriteList;

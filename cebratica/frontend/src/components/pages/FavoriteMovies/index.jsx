@@ -6,7 +6,6 @@ import './FavouriteList.scss';
 const FavoriteMovies = () => {
   // eslint-disable-next-line max-len
   const localS = Object.entries(localStorage).map((element) => ({ element: JSON.parse(element[0]), film: JSON.parse(element[1]) }));
-  console.log(localS);
   return (
     <section className="detail">
       <h1 className="detail__h1-title">Here you have all favorite movies</h1>
@@ -26,9 +25,8 @@ const FavoriteMovies = () => {
           <div className="detail__conatiner-img img-detail">
             <img className="img-detail__img" src={`https://image.tmdb.org/t/p/w500${e.film.id?.backdrop_path}`} alt="" />
           </div>
-          <div className=".button-detail_container">
-            <DeleteInFavoriteList movie={e.film.id.original_title} />
-          </div>
+
+          <DeleteInFavoriteList movie={e.film.id.original_title} />
 
         </div>
       ))}

@@ -3,6 +3,7 @@ import { useParams } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import movieDetail from '../../../redux/actions/actionCreatorMovieDetail';
 import CastMovieDetail from '../../sections/CastMovieDetail';
+
 import './MovieDetail.scss';
 
 const MovDetail = () => {
@@ -23,23 +24,22 @@ const MovDetail = () => {
         <h1 className="movie-detail__h1-title">Movie Details</h1>
         <div className="movie-detail__item-box item-box">
           <div className="item-box__item-description">
-            <div>
-              <h2 className="item-description__h2-title">{movieDetails?.title}</h2>
-              <p className="item-description__description">{movieDetails?.overview}</p>
-              <p className="item-description__rating-title">
-                Rating:
-                <span className="item-description__rating-number">{movieDetails?.vote_average}</span>
-              </p>
-              <p className="item-description__language">{movieDetails?.original_language}</p>
-            </div>
+
+            <h2 className="item-description__h2-title">{movieDetails?.title}</h2>
+            <p className="item-description__description">{movieDetails?.overview}</p>
+            <p className="item-description__rating-title">
+              Rating:
+              <span className="item-description__rating-number">{movieDetails?.vote_average}</span>
+            </p>
+            <p className="item-description__language">{movieDetails?.original_language}</p>
+
             <div />
             <div>
               <CastMovieDetail movie={movieId.id} />
             </div>
-
-            <div className="item-box__item-picture-box item-picture-box">
-              <img className="item-picture-box__img" src={`https://image.tmdb.org/t/p/w500${movieDetails?.poster_path}`} alt="Pouster" />
-            </div>
+          </div>
+          <div className="item-box__item-picture-box item-picture-box">
+            <img className="item-box__item-picture-box__img" src={`https://image.tmdb.org/t/p/w500${movieDetails?.poster_path}`} alt="Pouster" />
           </div>
         </div>
       </div>

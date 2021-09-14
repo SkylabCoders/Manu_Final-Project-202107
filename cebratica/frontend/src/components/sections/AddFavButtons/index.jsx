@@ -73,7 +73,7 @@ const AddToFavourites = (movies) => {
       <IconButton aria-label="delete" color="primary" variant="container" className={classes.buttonAdd} type="submit" onClick={() => addFavButton(movies)}>
         {!localStorage.getItem(JSON.stringify(movies.id.original_title))
           ? <FavoriteBorder />
-          : <Favorite />}
+          : <Favorite /> }
       </IconButton>
     </section>
   );

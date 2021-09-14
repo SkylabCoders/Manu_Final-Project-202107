@@ -27,9 +27,10 @@ const SearchMovies = () => {
   return (
     <section className="section-search-movie">
 
-      <h2 className="section-search-movie__h2-title">Search Movies</h2>
-      <form onSubmit={handleSubmit} className="section-search-movie__search-form">
+      <h2 data-testid="h2-title" className="section-search-movie__h2-title">Search Movies</h2>
+      <form data-testid="form-search" onSubmit={handleSubmit} className="section-search-movie__search-form">
         <input
+          data-testid="inpùt-search"
           className="search-form__input"
           type="search"
           name="searchMovie"

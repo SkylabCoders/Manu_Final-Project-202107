@@ -9,20 +9,13 @@ import './Header.scss';
 const Header = () => {
   const { isAuthenticated } = useAuth0();
 
-  const elemento = document.getElementById('header');
-  (window).scroll((e) => {
-    if (e.scrollTop() > 0) {
-      elemento.classList.add('cambioColor');
-    } else {
-      elemento.classList.remove('cambioColor');
-    }
-  });
   return (
     <header className="header">
       <div className="header__container">
         <div className="header__right-container">
           <NavLink to="/" className="header__logo-box">
             <img
+              data-testId="logo-img"
               className="header__logo-img"
               src="https://pngimg.com/uploads/zebra/zebra_PNG8958.png"
               alt="LOGO-CEBRATICA"
@@ -40,8 +33,8 @@ const Header = () => {
             && (
               <nav className="header__navegator">
                 <ul className="header__nav-list">
-                  <li className="header__nav-item"><Link className="header__nav-link" to="/profile">Profile</Link></li>
-                  <li className="header__nav-item"><Link className="header__nav-link" to="/favoritemovies/">Favorite Movies</Link></li>
+                  <li data-testId="link-profile" className="header__nav-item"><Link className="header__nav-link" to="/profile">Profile</Link></li>
+                  <li data-testId="link-favourite-movies" className="header__nav-item"><Link className="header__nav-link" to="/favoritemovies/">Favorite Movies</Link></li>
                 </ul>
               </nav>
             )}

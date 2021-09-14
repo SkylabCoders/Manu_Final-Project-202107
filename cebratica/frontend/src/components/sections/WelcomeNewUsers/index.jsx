@@ -13,6 +13,7 @@ const WelcomeNewUsers = () => {
       <div className="banner-welcome__container">
         <NavLink to="/" className="banner-welcome__logo">
           <img
+            data-testid="welcome__logo-img"
             className="banner-welcome__logo-img"
             src="https://i.ibb.co/C5SH2XL/LOGO-CEBRATICA.png"
             alt="LOGO-CEBRATICA"
@@ -20,8 +21,8 @@ const WelcomeNewUsers = () => {
           />
 
         </NavLink>
-        <p className="banner-welcome__subtitle">Its a simply web, create your list of favourite Movies and preserve.</p>
-        <p className="banner-welcome__login-text">Login if would you like add movies to your favourites list</p>
+        <p data-testid="subtitle-text" className="banner-welcome__subtitle">Its a simply web, create your list of favourite Movies and preserve.</p>
+        <p data-testid="login-text" className="banner-welcome__login-text">Login if would you like add movies to your favourites list</p>
         <p className="banner-welcome__login-button">
           { isAuthenticated
             ? <LogoutButton />

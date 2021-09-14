@@ -2,5 +2,5 @@ projectKey=cebratica
 serverUrl=http://localhost:9000
 serverVersion=8.9.1.44547
 dashboardUrl=http://localhost:9000/dashboard?id=cebratica
-ceTaskId=AXvjZ_N8BFJcC6xfE75-
-ceTaskUrl=http://localhost:9000/api/ce/task?id=AXvjZ_N8BFJcC6xfE75-
+ceTaskId=AXvk8e-OBFJcC6xfE792
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXvk8e-OBFJcC6xfE792

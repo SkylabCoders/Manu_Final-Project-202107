@@ -12,7 +12,7 @@ const removeMovieOfLocalStore = (movie) => {
 };
 const DeleteInFavoriteList = (movie) => (
   <div className=".button-detail__container">
-    <button className="addButton" type="submit" onClick={() => { removeMovieOfLocalStore(movie); window.location.reload(); }}>Delete Movie</button>
+    <button data-testId="button-delete" className="addButton" type="submit" onClick={() => { removeMovieOfLocalStore(movie); window.location.reload(); }}>Delete Movie</button>
   </div>
 
 );

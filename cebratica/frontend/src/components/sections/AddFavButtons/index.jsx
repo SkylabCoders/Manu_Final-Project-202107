@@ -1,10 +1,12 @@
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 
 import IconButton from '@material-ui/core/IconButton';
 import DeleteIcon from '@material-ui/icons/Delete';
-import AddToPhotosIcon from '@material-ui/icons/AddToPhotos';
+import FavoriteBorder from '@material-ui/icons/FavoriteBorder';
+import Favorite from '@material-ui/icons/Favorite';
 
 const useStyles = makeStyles({
   sectionButtons: {
@@ -61,13 +63,17 @@ const removeFavButton = (movies) => {
 
 const AddToFavourites = (movies) => {
   const classes = useStyles();
+
   return (
     <section className={classes.sectionButtons}>
+
       <IconButton aria-label="delete" color="primary" variant="container" className={classes.buttonDelete} type="submit" onClick={() => removeFavButton(movies)}>
         <DeleteIcon />
       </IconButton>
       <IconButton aria-label="delete" color="primary" variant="container" className={classes.buttonAdd} type="submit" onClick={() => addFavButton(movies)}>
-        <AddToPhotosIcon />
+        {!localStorage.getItem(JSON.stringify(movies.id.original_title))
+          ? <FavoriteBorder />
+          : <Favorite />}
       </IconButton>
     </section>
   );

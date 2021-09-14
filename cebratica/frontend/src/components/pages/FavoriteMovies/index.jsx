@@ -8,7 +8,7 @@ const FavoriteMovies = () => {
   const localS = Object.entries(localStorage).map((element) => ({ element: JSON.parse(element[0]), film: JSON.parse(element[1]) }));
   return (
     <section className="detail">
-      <h1 className="detail__h1-title">Here you have all favorite movies</h1>
+      <h1 id="h1-title" className="detail__h1-title">Here you have all favorite movies</h1>
       {localS.map((e) => (
         <div className="detail__conatiner-card">
           <div className="detail__conatiner-card__detail card-detail">

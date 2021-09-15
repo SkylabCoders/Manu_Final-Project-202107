@@ -11,8 +11,8 @@ describe('Given a Suggestion Favourite List', () => {
           <FavoriteMovies />
         );
       });
-      test('And should contain the "Here you have all favorite movies" text', () => {
-        expect(screen.getByText(/Here you have all favorite movies/i)).toBeInTheDocument();
+      test('And should contain the "My favorite movies" text', () => {
+        expect(screen.getByText(/My favorite movies/i)).toBeInTheDocument();
       });
     });
   });

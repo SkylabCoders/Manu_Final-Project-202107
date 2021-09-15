@@ -31,13 +31,11 @@ const useStyles = makeStyles({
 });
 const setStoreMovie = (movie) => {
   try {
-    if (!localStorage.getItem(JSON.stringify(movie.id.original_title))) {
-      localStorage.setItem(JSON.stringify(movie?.id.original_title), JSON.stringify(movie));
-      window.location.reload();
-    }
+    localStorage.setItem(JSON.stringify(movie?.id.original_title), JSON.stringify(movie));
+    window.location.reload();
   } catch (error) {
     // eslint-disable-next-line no-alert
-    alert('Elemento ya esta eliminado');
+    alert('Elemento esta eliminado');
   }
 };
 const addFavButton = (movies) => {

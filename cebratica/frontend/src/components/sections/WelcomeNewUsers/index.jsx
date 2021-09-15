@@ -21,8 +21,8 @@ const WelcomeNewUsers = () => {
           />
 
         </NavLink>
-        <p data-testid="subtitle-text" className="banner-welcome__subtitle">Its a simply web, create your list of favourite Movies and preserve.</p>
-        <p data-testid="login-text" className="banner-welcome__login-text">Login if would you like add movies to your favourites list</p>
+        <p data-testid="subtitle-text" className="banner-welcome__subtitle">Create your list of favorite movies and share it with your friends</p>
+        <p data-testid="login-text" className="banner-welcome__login-text">Login to access your favorite movies list</p>
         <p className="banner-welcome__login-button">
           { isAuthenticated
             ? <LogoutButton />

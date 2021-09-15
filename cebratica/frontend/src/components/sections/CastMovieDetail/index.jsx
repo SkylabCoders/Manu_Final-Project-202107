@@ -14,12 +14,12 @@ const CastMovieDetail = (movie) => {
   const castDetail = useSelector((store) => store.creditsMovie);
   const director = castDetail?.crew?.find((item) => item.known_for_department === 'Directing');
   return (
-    <div className="castDetails">
+    <div data-testId="castDetails" className="castDetails">
 
       {castDetail.cast && (
       <div>
-        <h2>Actors</h2>
-        <p>{castDetail?.cast[0].name}</p>
+        <h2 data-testId="h2-castDetail">Actors</h2>
+        <p data-testId="p-castDetail">{castDetail?.cast[0].name}</p>
         <p>{castDetail?.cast[1].name}</p>
         <p>{castDetail?.cast[2].name}</p>
       </div>

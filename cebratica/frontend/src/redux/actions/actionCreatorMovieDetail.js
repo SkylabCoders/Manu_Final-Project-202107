@@ -11,7 +11,7 @@ export default function movieDetail(id) {
         data
       });
     } catch (error) {
-      console.log('CATCH ERROR');
+      console.log(error);
     }
   };
 }

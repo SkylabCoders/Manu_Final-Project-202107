@@ -11,4 +11,5 @@ export default combineReducers({
   searchMovies: searchMovieReducers,
   movieDetails: movieDetailsReducer,
   creditsMovie: creditsMovieDetailReducer
+
 });

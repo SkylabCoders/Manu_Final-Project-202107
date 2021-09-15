@@ -10,8 +10,8 @@ const Profile = () => {
   }
   return (
     isAuthenticated && (
-    <main className="profile-container">
-      <img className="profile-container__img" src={user.picture} alt="user" />
+    <main data-testId="main-conatiner" className="profile-container">
+      <img data-testId="img-profile" className="profile-container__img" src={user.picture} alt="user" />
       <p className="profile-container__nickName">
         {user.nickname}
       </p>

@@ -11,7 +11,7 @@ import Pages404 from './pages/NotFound';
 import Profile from './pages/Profile';
 
 import Header from './sections/Header/index';
-
+import Footer from './sections/Footer';
 import './App.scss';
 
 const App = () => (
@@ -32,6 +32,7 @@ const App = () => (
 
         <Route component={Pages404} />
       </Switch>
+      <Footer />
     </Router>
   </Provider>
 );

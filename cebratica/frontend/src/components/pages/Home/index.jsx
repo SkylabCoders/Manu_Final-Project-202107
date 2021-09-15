@@ -3,7 +3,6 @@ import NavButtons from '../../sections/navButtons';
 import SearchMovies from '../../sections/Search';
 import FeaturedMovies from '../TopMovies';
 import WelcomeNewUsers from '../../sections/WelcomeNewUsers';
-import Footer from '../../sections/Footer';
 
 const Home = () => (
   <>
@@ -11,7 +10,6 @@ const Home = () => (
     <SearchMovies />
     <FeaturedMovies />
     <NavButtons />
-    <Footer />
   </>
 );
 

@@ -20,6 +20,7 @@ a:-webkit-any-link {
   justify-content: center;
   align-items: center;
   background-color: rgba(239, 239, 247, 0.842);
+  padding-bottom: 5rem;
 }
 .movies__grid {
   display: flex;
@@ -90,4 +91,11 @@ a:-webkit-any-link {
   border-radius: 25px;
   font-weight: 800;
   margin-top: 10px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .movies__h2-title {
+    color: midnightblue;
+    font-size: 1.5rem;
+  }
 }

@@ -38,6 +38,9 @@
   align-items: stretch;
   height: 100%;
   color: midnightblue;
+  &__h2-title {
+    text-align: center;
+  }
 }
 .img-detail {
   width: 50%;
@@ -49,5 +52,37 @@
     padding: 15px;
     box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.24),
       0 17px 50px 0 rgba(0, 0, 0, 0);
+  }
+}
+@media only screen and (max-device-width: 480px) {
+  .detail {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    &__h1-title {
+      display: flex;
+      width: 80%;
+      padding: 25px;
+      font-size: 1.7rem;
+    }
+  }
+  .detail__conatiner-card {
+    width: 80%;
+    flex-flow: column wrap;
+  }
+  .card-detail {
+    padding: 15px 0px;
+    width: 85%;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+  }
+  .img-detail {
+    width: 100%;
+    height: auto;
+    padding: 15px;
+    &__img {
+      padding: 5px;
+    }
   }
 }

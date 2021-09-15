@@ -35,7 +35,7 @@ const SearchMovies = () => {
           type="search"
           name="searchMovie"
           id="searchMovie"
-          placeholder="Search your favourite movie"
+          placeholder="Search your movies"
           value={searchMovie}
           onChange={handleOnChange}
         />

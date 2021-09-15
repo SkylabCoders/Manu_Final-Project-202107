@@ -12,10 +12,10 @@ const SearchMovies = () => {
   const { isAuthenticated } = useAuth0();
   const [searchMovie, setSearchMovie] = useState('');
 
-  const handleOnChange = (e) => { setSearchMovie(e.target.value); };
+  const handleOnChange = (event) => { setSearchMovie(event.target.value); };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = (event) => {
+    event.preventDefault();
   };
   const dispatch = useDispatch();
   useEffect(() => {

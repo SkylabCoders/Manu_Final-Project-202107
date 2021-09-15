@@ -34,9 +34,6 @@ const setStoreMovie = (movie) => {
     if (!localStorage.getItem(JSON.stringify(movie.id.original_title))) {
       localStorage.setItem(JSON.stringify(movie?.id.original_title), JSON.stringify(movie));
       window.location.reload();
-    } else {
-      // eslint-disable-next-line no-alert
-      alert('Already exist');
     }
   } catch (error) {
     // eslint-disable-next-line no-alert

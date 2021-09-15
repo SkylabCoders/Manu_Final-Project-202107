@@ -1,6 +1,6 @@
 import React from 'react';
-import { render, screen } from '../../../utils/test.utils';
 
+import { render, screen } from '../../../utils/test.utils';
 import FavoriteMovies from './index';
 
 describe('Given a Suggestion Favourite List', () => {

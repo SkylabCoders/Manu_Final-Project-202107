@@ -17,10 +17,10 @@ const MovDetail = () => {
   const movieDetails = useSelector((store) => store.movieDetails);
 
   return (
-    <section className="details-section">
+    <section data-testId="details-section" className="details-section">
       {movieDetails
       && (
-      <div className="movie-detail">
+      <div data-testId="movie-detail" className="movie-detail">
         <h1 className="movie-detail__h1-title">Movie Details</h1>
         <div className="movie-detail__item-box item-box">
           <div className="item-box__item-description">

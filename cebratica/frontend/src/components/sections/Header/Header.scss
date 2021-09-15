@@ -75,3 +75,35 @@
 .cambioColor {
   background-color: yellowgreen;
 }
+
+@media only screen and (max-device-width: 480px) {
+  .header {
+    width: 100%;
+    &__container {
+      width: 95%;
+    }
+    &__logo-img {
+      height: 3rem;
+    }
+    &__navegator {
+      width: 200px;
+    }
+    &__nav-list {
+      display: flex;
+      justify-content: space-around;
+      flex-flow: row nowrap;
+      align-items: center;
+      height: 100%;
+      width: auto;
+      list-style: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    &__button-log {
+      padding: 8px 20px;
+    }
+    &__nav-link {
+      padding: 0;
+    }
+  }
+}

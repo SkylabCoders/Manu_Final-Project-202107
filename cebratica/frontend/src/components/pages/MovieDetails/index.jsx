@@ -31,8 +31,6 @@ const MovDetail = () => {
               Rating:
               <span className="item-description__rating-number">{movieDetails?.vote_average}</span>
             </p>
-            <p className="item-description__language">{movieDetails?.original_language}</p>
-
             <div />
             <div>
               <CastMovieDetail movie={movieId.id} />

@@ -17,7 +17,7 @@ const CastMovieDetail = (movie) => {
     <div data-testId="castDetails" className="castDetails">
 
       {castDetail.cast && (
-      <div>
+      <div className="actors-details">
         <h2 data-testId="h2-castDetail">Actors</h2>
         <p data-testId="p-castDetail">{castDetail?.cast[0].name}</p>
         <p>{castDetail?.cast[1].name}</p>
@@ -28,7 +28,7 @@ const CastMovieDetail = (movie) => {
       <div>
 
         {director?.name && (
-          <div>
+          <div className="director-details">
             <h2>Director</h2>
             <p>{director?.name}</p>
           </div>
